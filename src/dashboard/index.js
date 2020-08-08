@@ -9,7 +9,7 @@ const Dashboard = () => {
         <div>
     
             <Route path="/dashboard/new-project" component={NewProject} />
-            <Route path="/dashboard/new-resource" component={New} />
+            <Route path="/dashboard/new-resource" component={NewProject} />
             <Route path="/dashboard/home" component={Home} />
           
             
