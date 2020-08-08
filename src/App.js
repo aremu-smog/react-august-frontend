@@ -7,7 +7,6 @@ import './App.css';
 import Dashboard from './dashboard';
 import Landing from './landing';
 
-
 function App() {
   return (
     <div className="App">
