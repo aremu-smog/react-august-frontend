@@ -1,0 +1,65 @@
+$deep-blue: #211C49;
+$light-blue: #12B2DD;
+
+@font-face{
+    font-family: "Mogena";
+    src: local('Mogena'), url(../fonts/Mogena.ttf);
+}
+body{
+    background: $deep-blue;
+    color: white;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+    font-family: "Mogena";
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+//Utilities
+.flex{
+    display: flex;
+}
+.space-between{
+   justify-content: space-between;
+}
+
+.main-header{
+    padding: 1.5em 3em;
+    // background: white;
+    .logo{
+        img {
+            width: 200px;
+        }
+    }
+}
+
+.content-wrapper{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.title{
+    h1{
+        font-size: 4em;
+        
+    }
+    img{
+        height: 40px;
+        transition: transform 0.5s ease-out;
+    }
+    .new-item{
+        
+        &:hover{
+            transform: rotate(180deg);
+        }
+    }
+    .go-back{
+        margin-right: 20px;
+        &:hover{
+            transform: translateX(-20px);
+        }
+    }
+}

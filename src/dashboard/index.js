@@ -1,16 +1,19 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
 import NewProject from './NewProject'
+import NewResource from './NewResource'
+import Header from './components/Header'
 import Home from './Home'
-
+import './dashboard.css'
+import '../fonts/Mogena.ttf'
 
 const Dashboard = () => {
     return(
         <div>
-    
-            <Route path="/dashboard/new-project" component={NewProject} />
-            <Route path="/dashboard/new-resource" component={NewProject} />
-            <Route path="/dashboard/home" component={Home} />
+            <Header />
+            <Route path="/dashboard/new-project"  component={NewProject} />
+            <Route path="/dashboard/new-resource"  component={NewResource} />
+            <Route path="/dashboard" exact component={Home} />
           
             
            
