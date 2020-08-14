@@ -39,6 +39,7 @@ a{
 .content-wrapper{
     max-width: 1000px;
     margin: auto;
+    padding: 0 2em;
 }
 
 .title{
@@ -60,6 +61,52 @@ a{
         margin-right: 20px;
         &:hover{
             transform: translateX(-20px);
+        }
+    }
+}
+
+.form-container{
+    max-width: 550px;
+}
+
+.form-group{
+    margin-bottom: 1.5em;
+    label{
+        display: block;
+        margin-bottom: 20px;
+    }
+    input{
+        min-width: 100%;
+        font-size: 1.2em;
+        border-radius: 50px;
+        padding: 0.5em 1.5em;
+        border-width: 1px;
+        color: white;
+        border-color: white;
+        outline: none;
+        background: none;
+        transition: all 0.3s ease-out;
+        &:hover{
+            border-color: $light-blue;
+        }
+        &:focus{
+            border-color: $light-blue;
+            border-radius: 0px;
+        }
+    }
+    input[type="submit"]{
+        min-width: 200px;
+        background: $light-blue;
+        cursor: pointer;
+        border-color: $light-blue;
+        padding: 0.75em 2em;
+        font-size: 1em;
+        transition: background 0.3s ease-out;
+        &:hover{
+            background: none;
+        }
+        &:focus{
+            border-radius: 50px;
         }
     }
 }

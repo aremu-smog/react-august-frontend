@@ -41,6 +41,7 @@ a {
 .content-wrapper {
   max-width: 1000px;
   margin: auto;
+  padding: 0 2em;
 }
 
 .title h1 {
@@ -67,5 +68,60 @@ a {
 .title .go-back:hover {
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
+}
+
+.form-container {
+  max-width: 550px;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  min-width: 100%;
+  font-size: 1.2em;
+  border-radius: 50px;
+  padding: 0.5em 1.5em;
+  border-width: 1px;
+  color: white;
+  border-color: white;
+  outline: none;
+  background: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.form-group input:hover {
+  border-color: #12B2DD;
+}
+
+.form-group input:focus {
+  border-color: #12B2DD;
+  border-radius: 0px;
+}
+
+.form-group input[type="submit"] {
+  min-width: 200px;
+  background: #12B2DD;
+  cursor: pointer;
+  border-color: #12B2DD;
+  padding: 0.75em 2em;
+  font-size: 1em;
+  -webkit-transition: background 0.3s ease-out;
+  transition: background 0.3s ease-out;
+}
+
+.form-group input[type="submit"]:hover {
+  background: none;
+}
+
+.form-group input[type="submit"]:focus {
+  border-radius: 50px;
 }
 /*# sourceMappingURL=dashboard.css.map */
