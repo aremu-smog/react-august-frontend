@@ -13,21 +13,25 @@ const NewProject = () => {
     const addProject = (e) => {
         e.preventDefault()
         setLoading(true)
+        setMessage("")
 
         const data = new FormData()
         data.append("project_name",projectName)
         data.append("project_slug",projectSlug)
-        data.append("project_image",projectImage)
-        axios.post("http://react-august-api.herokuapp.com/api/projects", data)
+        data.append("project_image",projectImage,projectImage.name)
+        const server = "http://react-august-api.herokuapp.com/"
+        // const server = "http://127.0.0.1:8000/"
+        axios.post(server+"api/projects", data)
         .then(res => {
             setLoading(false)
             setMessage("Data uploaded successfully")
+            // console.log(res.data)
     
         })
         .catch(error => {
             setLoading(false)
             setMessage(error.message)
-            console.log(error)
+            // console.log(error)
         })
     }
 
