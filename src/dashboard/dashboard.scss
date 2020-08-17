@@ -123,6 +123,7 @@ a{
     padding-right: 0;
     display: inline-flex;
     cursor: pointer;
+    margin-right: 20px;
     .text{
         margin-right: 15px;
     }
@@ -136,6 +137,9 @@ a{
         margin-left: -20px;
         transition: all 0.5s ease-out;
         transition-delay: 0.2s;
+    }
+    img{
+        width: 25px;
     }
     &:hover{
         .edit{

@@ -142,6 +142,7 @@ a {
   display: -ms-inline-flexbox;
   display: inline-flex;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .project_list .text {
@@ -164,6 +165,10 @@ a {
   transition: all 0.5s ease-out;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
+}
+
+.project_list img {
+  width: 25px;
 }
 
 .project_list:hover .edit {
