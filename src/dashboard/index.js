@@ -1,6 +1,6 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
-import NewProject from './NewProject'
+import NewProject from './project/NewProject'
 import NewResource from './NewResource'
 import Header from './components/Header'
 import Home from './Home'

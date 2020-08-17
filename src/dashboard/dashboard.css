@@ -30,6 +30,13 @@ a {
           justify-content: space-between;
 }
 
+.horizontal_align {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .main-header {
   padding: 1.5em 3em;
 }
@@ -123,5 +130,51 @@ a {
 
 .form-group input[type="submit"]:focus {
   border-radius: 50px;
+}
+
+.project_list {
+  background: white;
+  color: #211C49;
+  padding: 0.5em 1.5em;
+  border-radius: 50px;
+  padding-right: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.project_list .text {
+  margin-right: 15px;
+}
+
+.project_list .edit {
+  margin-left: -20px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.project_list .delete {
+  -webkit-transform: translateX(0) scale(0);
+          transform: translateX(0) scale(0);
+  margin-left: -20px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.project_list:hover .edit {
+  margin-left: 0px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.project_list:hover .delete {
+  margin-left: 0px;
+  -webkit-transform: translateX(10px) scale(1);
+          transform: translateX(10px) scale(1);
 }
 /*# sourceMappingURL=dashboard.css.map */

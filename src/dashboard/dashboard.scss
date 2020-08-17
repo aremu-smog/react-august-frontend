@@ -26,6 +26,10 @@ a{
    justify-content: space-between;
 }
 
+.horizontal_align{
+    flex-direction: row;
+}
+
 .main-header{
     padding: 1.5em 3em;
     // background: white;
@@ -109,4 +113,40 @@ a{
             border-radius: 50px;
         }
     }
+}
+
+.project_list{
+    background: white;
+    color: $deep-blue;
+    padding: 0.5em 1.5em;
+    border-radius: 50px;
+    padding-right: 0;
+    display: inline-flex;
+    cursor: pointer;
+    .text{
+        margin-right: 15px;
+    }
+    .edit{
+        margin-left: -20px;
+        transform: scale(0);
+        transition: all 0.5s ease-out;
+    }
+    .delete{
+        transform: translateX(0)  scale(0);
+        margin-left: -20px;
+        transition: all 0.5s ease-out;
+        transition-delay: 0.2s;
+    }
+    &:hover{
+        .edit{
+            margin-left: 0px;
+            transform: scale(1);
+        }
+        .delete{
+            margin-left: 0px;
+            transform: translateX(10px) scale(1)  ;
+        }
+    }
+  
+
 }
