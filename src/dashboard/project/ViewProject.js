@@ -1,11 +1,24 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import axios from 'axios'
 
-const ViewProject = ({name}) =>{
+const deleteProject = (project_id) =>{
+    // alert(project_id)
+    axios.delete(`http://react-august-api.herokuapp.com/api/projects/${project_id}`)
+    .then(res => {
+        alert('Project Deleted')
+    })
+    .catch(error => {
+        alert(error.message)
+    })
+}
+
+const ViewProject = ({project_name,project_id}) =>{
     return(
         <div className="project_list space_between">
-            <div class="text">{name}</div> 
-            <img src="../../dashboard/edit_icon.svg" class="edit" alt="Edit Icon" />
-            <img src="../../dashboard/delete_icon.svg" class="delete" alt="Delete Icon" />
+            <div class="text">{project_name}</div> 
+            <Link to="#"><img src="../../dashboard/edit_icon.svg" class="edit" alt="Edit Icon" /></Link>
+            <img onClick={()=> deleteProject(project_id)} src="../../dashboard/delete_icon.svg" class="delete" alt="Delete Icon" />
         </div>
     )
 }

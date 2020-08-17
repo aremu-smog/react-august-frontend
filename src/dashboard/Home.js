@@ -25,7 +25,7 @@ const Home = () => {
         <div className="content-wrapper">
             <Title name="Projects" link="dashboard/new-project" new_item={true} />
             {
-                projects.map(project => <ViewProject key={project.id} name={project.name}/>)
+                projects.map(project => <ViewProject key={project.id} project_id={project.id} project_name={project.name}/>)
             }
             <Title name="Resources" link="dashboard/new-resource" new_item={true} />
         </div>
