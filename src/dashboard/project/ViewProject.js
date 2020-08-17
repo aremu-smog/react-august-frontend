@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const deleteProject = (project_id) =>{
     // alert(project_id)
-    axios.delete(`http://react-august-api.herokuapp.com/api/projects/${project_id}`)
+    axios.delete(`https://react-august-api.herokuapp.com/api/projects/${project_id}`)
     .then(res => {
         alert('Project Deleted')
     })

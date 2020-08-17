@@ -10,7 +10,7 @@ const Home = () => {
     const [projects, setProjects] = useState([])
 
     useEffect(()=>{
-        axios.get("http://react-august-api.herokuapp.com/api/projects")
+        axios.get("https://react-august-api.herokuapp.com/api/projects")
         .then(res => {
             setProjects(res.data)
         })
