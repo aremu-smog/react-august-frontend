@@ -1,14 +1,31 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import Title from '../components/Title'
 import axios from 'axios'
+import {useParams} from 'react-router-dom'
 
-const NewProject = () => {
+const EditProject = () => {
     const [loading, setLoading] = useState(false)
     const [message, setMessage] = useState("")
 
     const [projectName, setProjectName] = useState()
     const [projectSlug, setProjectSlug] = useState()
     const [projectImage, setProjectImage] = useState(null)
+    const [project, setProject] = useState({})
+
+    let id = useParams().id
+    useEffect(()=> {
+        console.log(`Component ti mount bayi ${id}`)
+        axios.get(`https://react-august-api.herokuapp.com/api/projects/${id}`)
+        .then(res => {
+           setProject(res.data) 
+           setProjectName(project.name)
+           setProjectSlug(project.slug)
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
+
+    }, [id,project.name, project.slug])
 
     const addProject = (e) => {
         e.preventDefault()
@@ -18,14 +35,16 @@ const NewProject = () => {
         const data = new FormData()
         data.append("project_name",projectName)
         data.append("project_slug",projectSlug)
-        data.append("project_image",projectImage,projectImage.name)
+        if(projectImage != null){
+            data.append("project_image",projectImage,projectImage.name)
+        }
         const server = "http://react-august-api.herokuapp.com/"
         // const server = "http://127.0.0.1:8000/"
-        axios.post(server+"api/projects", data)
+        axios.put(server+"api/projects", data)
         .then(res => {
             setLoading(false)
             setMessage("Data uploaded successfully")
-            // console.log(res.data)
+            console.log(res.data)
     
         })
         .catch(error => {
@@ -37,18 +56,18 @@ const NewProject = () => {
 
     return(
         <div className="content-wrapper">
-            <Title name="New Project" link="dashboard"  />
+            <Title name="Edit Project" link="dashboard"  />
             <div className="form-container">
             <h3>{message}</h3>
         <form onSubmit={addProject}>
                 <div className="form-group">
                     <label>Project Name </label>
-                    <input type="text"  required  onChange={(e) => setProjectName(e.target.value)} placeholder="e.g Countdown Timer" />
+                    <input type="text" value={projectName}  required  onChange={(e) => setProjectName(e.target.value)} placeholder="e.g Countdown Timer" />
                 </div>
 
                 <div className="form-group">
                     <label>Project Slug</label>
-                    <input type="text" required  onChange={(e) => setProjectSlug(e.target.value)} placeholder = "e.g countdown-timer" />
+                    <input type="text" required value={projectSlug} onChange={(e) => setProjectSlug(e.target.value)} placeholder = "e.g countdown-timer" />
                 </div>
 
                 <div className="form-group">
@@ -66,4 +85,4 @@ const NewProject = () => {
     )
 }
 
-export default NewProject
+export default EditProject

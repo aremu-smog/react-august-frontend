@@ -19,7 +19,7 @@ const Home = () => {
                 console.log(error)
             }
         )
-    }, [projects])
+    }, [])
 
     return(
         <div className="content-wrapper">
