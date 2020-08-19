@@ -24,6 +24,8 @@ const NewResource = () => {
             setLoading(false)
             setMessage("Resource added successfully")
             // console.log(res.data)
+            setResourceName("")
+            setResourceLink("")
     
         })
         .catch(error => {
@@ -41,12 +43,12 @@ const NewResource = () => {
         <form onSubmit={addResource}>
                 <div className="form-group">
                     <label>Resource Name </label>
-                    <input type="text"  required  onChange={(e) => setResourceName(e.target.value)} placeholder="e.g Countdown Timer" />
+                    <input type="text" value={resourceName}  required  onChange={(e) => setResourceName(e.target.value)} placeholder="e.g How to send multiple request with axios" />
                 </div>
 
                 <div className="form-group">
                     <label>Resource Link</label>
-                    <input type="text" required  onChange={(e) => setResourceLink(e.target.value)} placeholder = "e.g countdown-timer" />
+                    <input type="text" value={resourceLink} required  onChange={(e) => setResourceLink(e.target.value)} placeholder = "e.g https://www.storyblok.com/tp/how-to-send-multiple-requests-using-axios" />
                 </div>
 
                 <div className="form-group">

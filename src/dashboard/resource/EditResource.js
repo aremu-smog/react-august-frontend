@@ -70,7 +70,7 @@ const EditResource = () => {
 
 
                 <div className="form-group">
-                    <input type="submit" value={loading ? "Hang on a sec...":"Update Project"} />
+                    <input type="submit" value={loading ? "Hang on a sec...":"Update Resource"} />
                 </div>
 
             </form>

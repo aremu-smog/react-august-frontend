@@ -23,7 +23,10 @@ const NewProject = () => {
         axios.post(`${server}/api/projects`, data)
         .then(res => {
             setLoading(false)
-            setMessage("Data uploaded successfully")
+            setMessage("Project uploaded successfully")
+            setProjectName("")
+            setProjectSlug("")
+            setProjectImage(null)
             // console.log(res.data)
     
         })
@@ -42,17 +45,17 @@ const NewProject = () => {
         <form onSubmit={addProject}>
                 <div className="form-group">
                     <label>Project Name </label>
-                    <input type="text"  required  onChange={(e) => setProjectName(e.target.value)} placeholder="e.g Countdown Timer" />
+                    <input type="text"  required value={projectName}  onChange={(e) => setProjectName(e.target.value)} placeholder="e.g Countdown Timer" />
                 </div>
 
                 <div className="form-group">
                     <label>Project Slug</label>
-                    <input type="text" required  onChange={(e) => setProjectSlug(e.target.value)} placeholder = "e.g countdown-timer" />
+                    <input type="text" required value={projectSlug} onChange={(e) => setProjectSlug(e.target.value)} placeholder = "e.g countdown-timer" />
                 </div>
 
                 <div className="form-group">
                     <label>Project Image</label>
-                    <input type="file"  onChange ={(e) => setProjectImage(e.target.files[0])} />
+                    <input type="file"   onChange ={(e) => setProjectImage(e.target.files[0])} />
                 </div>
 
                 <div className="form-group">
