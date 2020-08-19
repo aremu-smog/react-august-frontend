@@ -43,10 +43,10 @@ const EditProject = () => {
 
         }
 
-        if(projectImage != null){
-            // data.append("project_image",projectImage,projectImage.name)
-            // data.project
-        }
+        // if(projectImage != null){
+        //     // data.append("project_image",projectImage,projectImage.name)
+        //     // data.project
+        // }
         
         axios.put(`${server}/api/projects/${id}`, data)
         .then(res => {

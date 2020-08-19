@@ -25,7 +25,7 @@ const Home = () => {
                 console.log(error)
             }
         )
-    }, [])
+    }, [projectRequest, resourceRequest])
 
     return(
         <div className="content-wrapper">
