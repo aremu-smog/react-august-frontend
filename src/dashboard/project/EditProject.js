@@ -33,11 +33,19 @@ const EditProject = () => {
         setLoading(true)
         setMessage("")
 
-        const data = new FormData()
-        data.append("project_name",projectName)
-        data.append("project_slug",projectSlug)
+        // const data = new FormData()
+        // data.append("project_name",projectName)
+        // data.append("project_slug",projectSlug)
+
+        const data = {
+            "project_name": projectName,
+            "project_slug": projectSlug
+
+        }
+
         if(projectImage != null){
-            data.append("project_image",projectImage,projectImage.name)
+            // data.append("project_image",projectImage,projectImage.name)
+            // data.project
         }
         
         axios.put(`${server}/api/projects/${id}`, data)
