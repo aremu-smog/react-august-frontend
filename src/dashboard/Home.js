@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import Title from './components/Title'
 import ViewProject from './project/ViewProject'
-
+import {server} from "./constants"
 import axios from 'axios'
 
 
@@ -10,7 +10,7 @@ const Home = () => {
     const [projects, setProjects] = useState([])
 
     useEffect(()=>{
-        axios.get("https://react-august-api.herokuapp.com/api/projects")
+        axios.get(`${server}/api/projects`)
         .then(res => {
             setProjects(res.data)
         })

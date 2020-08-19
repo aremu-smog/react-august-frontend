@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react'
 import Title from '../components/Title'
 import axios from 'axios'
 import {useParams} from 'react-router-dom'
+import {server} from '../constants'
 
 const EditProject = () => {
     const [loading, setLoading] = useState(false)
@@ -15,7 +16,7 @@ const EditProject = () => {
     let id = useParams().id
     useEffect(()=> {
         console.log(`Component ti mount bayi ${id}`)
-        axios.get(`https://react-august-api.herokuapp.com/api/projects/${id}`)
+        axios.get(`${server}/api/projects/${id}`)
         .then(res => {
            setProject(res.data) 
            setProjectName(project.name)
@@ -27,7 +28,7 @@ const EditProject = () => {
 
     }, [id,project.name, project.slug])
 
-    const addProject = (e) => {
+    const updateProject = (e) => {
         e.preventDefault()
         setLoading(true)
         setMessage("")
@@ -38,9 +39,8 @@ const EditProject = () => {
         if(projectImage != null){
             data.append("project_image",projectImage,projectImage.name)
         }
-        const server = "http://react-august-api.herokuapp.com/"
-        // const server = "http://127.0.0.1:8000/"
-        axios.put(server+"api/projects", data)
+        
+        axios.put(`${server}/api/projects/${id}`, data)
         .then(res => {
             setLoading(false)
             setMessage("Data uploaded successfully")
@@ -59,7 +59,7 @@ const EditProject = () => {
             <Title name="Edit Project" link="dashboard"  />
             <div className="form-container">
             <h3>{message}</h3>
-        <form onSubmit={addProject}>
+        <form onSubmit={updateProject}>
                 <div className="form-group">
                     <label>Project Name </label>
                     <input type="text" value={projectName}  required  onChange={(e) => setProjectName(e.target.value)} placeholder="e.g Countdown Timer" />
@@ -76,7 +76,7 @@ const EditProject = () => {
                 </div>
 
                 <div className="form-group">
-                    <input type="submit" value={loading ? "Hang on a sec...":"Create Project"} />
+                    <input type="submit" value={loading ? "Hang on a sec...":"Update Project"} />
                 </div>
 
             </form>

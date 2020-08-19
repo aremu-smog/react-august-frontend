@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Title from '../components/Title'
 import axios from 'axios'
+import {server} from '../constants'
 
 const NewProject = () => {
     const [loading, setLoading] = useState(false)
@@ -19,9 +20,7 @@ const NewProject = () => {
         data.append("project_name",projectName)
         data.append("project_slug",projectSlug)
         data.append("project_image",projectImage,projectImage.name)
-        const server = "http://react-august-api.herokuapp.com/"
-        // const server = "http://127.0.0.1:8000/"
-        axios.post(server+"api/projects", data)
+        axios.post(`${server}/api/projects`, data)
         .then(res => {
             setLoading(false)
             setMessage("Data uploaded successfully")
