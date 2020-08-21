@@ -8,8 +8,7 @@ import axios from 'axios'
 
 const Home = () => {
     const [projects, setProjects] = useState([])
-
-    useEffect(()=>{
+    const getProjects = () => {
         axios.get("https://react-august-api.herokuapp.com/api/projects")
         .then(res => {
             setProjects(res.data)
@@ -19,7 +18,14 @@ const Home = () => {
                 console.log(error)
             }
         )
-    }, [projects])
+
+        return () =>{
+            console.log("Code to unmount")
+        }
+    }
+    useEffect( () =>{
+        getProjects()
+    }, [])
 
     return(
         <div className="content-wrapper">

@@ -30,6 +30,12 @@ a {
           justify-content: space-between;
 }
 
+.vertical-align {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .horizontal_align {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;

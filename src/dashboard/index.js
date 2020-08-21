@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Home from './Home'
 import './dashboard.css'
 import '../fonts/Mogena.ttf'
+import EditProject from './project/EditProject'
 
 const Dashboard = () => {
     return(
@@ -13,6 +14,7 @@ const Dashboard = () => {
             <Header />
             <Route path="/dashboard/new-project"  component={NewProject} />
             <Route path="/dashboard/new-resource"  component={NewResource} />
+            <Route path="/dashboard/edit-project/:id"  component={EditProject}/>
             <Route path="/dashboard" exact component={Home} />
           
             
