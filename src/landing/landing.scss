@@ -17,6 +17,7 @@ $light-blue: #12B2DD;
         font-size: 5em;
         display: inline-block;
         transform: translateX(120%);
+        min-width: 100%;
         animation: gbe_body_e 20s linear forwards infinite;
         white-space: nowrap;
         margin: 0.5em;
