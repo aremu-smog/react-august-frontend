@@ -5,152 +5,155 @@ $light-blue: #12B2DD;
     font-family: "Mogena";
     src: local('Mogena'), url(../fonts/Mogena.ttf);
 }
-body{
+.dashboard{
     background: $deep-blue;
     color: white;
-}
-h1,h2,h3,h4,h5,h6{
-    font-weight: normal;
-    font-family: "Mogena";
-}
 
-a{
-    text-decoration: none;
-    color: white;
-}
-//Utilities
-.flex{
-    display: flex;
-}
-.space-between{
-   justify-content: space-between;
-}
 
-.horizontal_align{
-    flex-direction: row;
-}
 
-.main-header{
-    padding: 1.5em 3em;
-    // background: white;
-    .logo{
-        img {
-            width: 200px;
-        }
+    h1,h2,h3,h4,h5,h6{
+        font-weight: normal;
+        font-family: "Mogena";
     }
-}
-
-.content-wrapper{
-    max-width: 1000px;
-    margin: auto;
-    padding: 0 2em;
-}
-
-.title{
-    h1{
-        font-size: 4em;
-        
-    }
-    img{
-        height: 40px;
-        transition: transform 0.5s ease-out;
-    }
-    .new-item{
-        
-        &:hover{
-            transform: rotate(180deg);
-        }
-    }
-    .go-back{
-        margin-right: 20px;
-        &:hover{
-            transform: translateX(-20px);
-        }
-    }
-}
-
-.form-container{
-    max-width: 550px;
-}
-
-.form-group{
-    margin-bottom: 1.5em;
-    label{
-        display: block;
-        margin-bottom: 20px;
-    }
-    input{
-        min-width: 100%;
-        font-size: 1.2em;
-        border-radius: 50px;
-        padding: 0.5em 1.5em;
-        border-width: 1px;
+    
+    a{
+        text-decoration: none;
         color: white;
-        border-color: white;
-        outline: none;
-        background: none;
-        transition: all 0.3s ease-out;
-        &:hover{
-            border-color: $light-blue;
-        }
-        &:focus{
-            border-color: $light-blue;
+    }
+    //Utilities
+    .flex{
+        display: flex;
+    }
+    .space-between{
+       justify-content: space-between;
+    }
+    
+    .horizontal_align{
+        flex-direction: row;
+    }
+    
+    .main-header{
+        padding: 1.5em 3em;
+        // background: white;
+        .logo{
+            img {
+                width: 200px;
+            }
         }
     }
-    input[type="submit"]{
-        min-width: 200px;
-        background: $light-blue;
-        cursor: pointer;
-        border-color: $light-blue;
-        padding: 0.75em 2em;
-        font-size: 1em;
-        transition: background 0.3s ease-out;
-        &:hover{
-            background: none;
+    
+    .content-wrapper{
+        max-width: 1000px;
+        margin: auto;
+        padding: 0 2em;
+    }
+    
+    .title{
+        h1{
+            font-size: 4em;
+            
         }
-        &:focus{
+        img{
+            height: 40px;
+            transition: transform 0.5s ease-out;
+        }
+        .new-item{
+            
+            &:hover{
+                transform: rotate(180deg);
+            }
+        }
+        .go-back{
+            margin-right: 20px;
+            &:hover{
+                transform: translateX(-20px);
+            }
+        }
+    }
+    
+    .form-container{
+        max-width: 550px;
+    }
+    
+    .form-group{
+        margin-bottom: 1.5em;
+        label{
+            display: block;
+            margin-bottom: 20px;
+        }
+        input{
+            min-width: 100%;
+            font-size: 1.2em;
             border-radius: 50px;
+            padding: 0.5em 1.5em;
+            border-width: 1px;
+            color: white;
+            border-color: white;
+            outline: none;
+            background: none;
+            transition: all 0.3s ease-out;
+            &:hover{
+                border-color: $light-blue;
+            }
+            &:focus{
+                border-color: $light-blue;
+            }
+        }
+        input[type="submit"]{
+            min-width: 200px;
+            background: $light-blue;
+            cursor: pointer;
+            border-color: $light-blue;
+            padding: 0.75em 2em;
+            font-size: 1em;
+            transition: background 0.3s ease-out;
+            &:hover{
+                background: none;
+            }
+            &:focus{
+                border-radius: 50px;
+            }
         }
     }
-}
-
-.project_list{
-    background: white;
-    color: $deep-blue;
-    padding: 0.5em 1.5em;
-    border-radius: 50px;
-    padding-right: 0;
-    display: inline-flex;
-    cursor: pointer;
-    margin-right: 20px;
-    .text{
-        margin-right: 15px;
-        margin-top: 2.5px;
-    }
-    .edit{
-        margin-left: -20px;
-        transform: scale(0);
-        transition: all 0.5s ease-out;
-    }
-    .delete{
-        transform: translateX(0)  scale(0);
-        margin-left: -20px;
-        transition: all 0.5s ease-out;
-        transition-delay: 0.2s;
-    }
-    img{
-        width: 25px;
-    }
-    &:hover{
+    
+    .project_list{
+        background: white;
+        color: $deep-blue;
+        padding: 0.5em 1.5em;
+        border-radius: 50px;
+        padding-right: 0;
+        display: inline-flex;
+        cursor: pointer;
+        margin-right: 20px;
+        .text{
+            margin-right: 15px;
+            margin-top: 2.5px;
+        }
         .edit{
-            margin-left: 0px;
-            transform: scale(1);
+            margin-left: -20px;
+            transform: scale(0);
+            transition: all 0.5s ease-out;
         }
         .delete{
-            margin-left: 0px;
-            transform: translateX(10px) scale(1)  ;
+            transform: translateX(0)  scale(0);
+            margin-left: -20px;
+            transition: all 0.5s ease-out;
+            transition-delay: 0.2s;
         }
+        img{
+            width: 25px;
+        }
+        &:hover{
+            .edit{
+                margin-left: 0px;
+                transform: scale(1);
+            }
+            .delete{
+                margin-left: 0px;
+                transform: translateX(10px) scale(1)  ;
+            }
+        }
+      
+    
     }
-  
-
 }

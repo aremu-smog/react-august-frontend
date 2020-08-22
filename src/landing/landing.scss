@@ -1,0 +1,54 @@
+$light-blue: #12B2DD;
+
+.landing{
+    background: black;
+    min-height: 100vh;
+    font: "Red Hat", sans-serif;
+
+
+.scroll-text{
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
+    h1{
+        position: absolute;
+        color: $light-blue;
+        font-size: 5em;
+        display: inline-block;
+        transform: translateX(120%);
+        animation: gbe_body_e 20s linear forwards infinite;
+        white-space: nowrap;
+        margin: 0.5em;
+        line-height: 0;
+        &:nth-child(2){
+            animation-delay: 10s;
+            
+        }
+    }
+    
+   
+    .outline{
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $light-blue; 
+        color: black !important;
+    }       
+}
+.reverse{
+    h1{
+        animation-direction: reverse;
+        transform: translateX(-120%);
+    }     
+}
+
+@keyframes gbe_body_e{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+    
+}
+
+

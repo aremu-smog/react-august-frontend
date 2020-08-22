@@ -3,59 +3,59 @@
   src: local("Mogena"), url(../fonts/Mogena.ttf);
 }
 
-body {
+.dashboard {
   background: #211C49;
   color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.dashboard h1, .dashboard h2, .dashboard h3, .dashboard h4, .dashboard h5, .dashboard h6 {
   font-weight: normal;
   font-family: "Mogena";
 }
 
-a {
+.dashboard a {
   text-decoration: none;
   color: white;
 }
 
-.flex {
+.dashboard .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.space-between {
+.dashboard .space-between {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.horizontal_align {
+.dashboard .horizontal_align {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
-.main-header {
+.dashboard .main-header {
   padding: 1.5em 3em;
 }
 
-.main-header .logo img {
+.dashboard .main-header .logo img {
   width: 200px;
 }
 
-.content-wrapper {
+.dashboard .content-wrapper {
   max-width: 1000px;
   margin: auto;
   padding: 0 2em;
 }
 
-.title h1 {
+.dashboard .title h1 {
   font-size: 4em;
 }
 
-.title img {
+.dashboard .title img {
   height: 40px;
   -webkit-transition: -webkit-transform 0.5s ease-out;
   transition: -webkit-transform 0.5s ease-out;
@@ -63,34 +63,34 @@ a {
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
-.title .new-item:hover {
+.dashboard .title .new-item:hover {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.title .go-back {
+.dashboard .title .go-back {
   margin-right: 20px;
 }
 
-.title .go-back:hover {
+.dashboard .title .go-back:hover {
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
 }
 
-.form-container {
+.dashboard .form-container {
   max-width: 550px;
 }
 
-.form-group {
+.dashboard .form-group {
   margin-bottom: 1.5em;
 }
 
-.form-group label {
+.dashboard .form-group label {
   display: block;
   margin-bottom: 20px;
 }
 
-.form-group input {
+.dashboard .form-group input {
   min-width: 100%;
   font-size: 1.2em;
   border-radius: 50px;
@@ -104,15 +104,15 @@ a {
   transition: all 0.3s ease-out;
 }
 
-.form-group input:hover {
+.dashboard .form-group input:hover {
   border-color: #12B2DD;
 }
 
-.form-group input:focus {
+.dashboard .form-group input:focus {
   border-color: #12B2DD;
 }
 
-.form-group input[type="submit"] {
+.dashboard .form-group input[type="submit"] {
   min-width: 200px;
   background: #12B2DD;
   cursor: pointer;
@@ -123,15 +123,15 @@ a {
   transition: background 0.3s ease-out;
 }
 
-.form-group input[type="submit"]:hover {
+.dashboard .form-group input[type="submit"]:hover {
   background: none;
 }
 
-.form-group input[type="submit"]:focus {
+.dashboard .form-group input[type="submit"]:focus {
   border-radius: 50px;
 }
 
-.project_list {
+.dashboard .project_list {
   background: white;
   color: #211C49;
   padding: 0.5em 1.5em;
@@ -144,12 +144,12 @@ a {
   margin-right: 20px;
 }
 
-.project_list .text {
+.dashboard .project_list .text {
   margin-right: 15px;
   margin-top: 2.5px;
 }
 
-.project_list .edit {
+.dashboard .project_list .edit {
   margin-left: -20px;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -157,7 +157,7 @@ a {
   transition: all 0.5s ease-out;
 }
 
-.project_list .delete {
+.dashboard .project_list .delete {
   -webkit-transform: translateX(0) scale(0);
           transform: translateX(0) scale(0);
   margin-left: -20px;
@@ -167,17 +167,17 @@ a {
           transition-delay: 0.2s;
 }
 
-.project_list img {
+.dashboard .project_list img {
   width: 25px;
 }
 
-.project_list:hover .edit {
+.dashboard .project_list:hover .edit {
   margin-left: 0px;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.project_list:hover .delete {
+.dashboard .project_list:hover .delete {
   margin-left: 0px;
   -webkit-transform: translateX(10px) scale(1);
           transform: translateX(10px) scale(1);

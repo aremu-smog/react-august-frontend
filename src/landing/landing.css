@@ -1,0 +1,65 @@
+.landing {
+  background: black;
+  min-height: 100vh;
+  font: "Red Hat", sans-serif;
+}
+
+.landing .scroll-text {
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+}
+
+.landing .scroll-text h1 {
+  position: absolute;
+  color: #12B2DD;
+  font-size: 5em;
+  display: inline-block;
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+  -webkit-animation: gbe_body_e 20s linear forwards infinite;
+          animation: gbe_body_e 20s linear forwards infinite;
+  white-space: nowrap;
+  margin: 0.5em;
+  line-height: 0;
+}
+
+.landing .scroll-text h1:nth-child(2) {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+.landing .scroll-text .outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #12B2DD;
+  color: black !important;
+}
+
+.landing .reverse h1 {
+  animation-direction: reverse;
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
+}
+
+@-webkit-keyframes gbe_body_e {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes gbe_body_e {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+/*# sourceMappingURL=landing.css.map */
