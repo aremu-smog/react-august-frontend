@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import EditProject from './EditProject'
 import axios from 'axios'
 
 const deleteProject = (project_id) =>{
