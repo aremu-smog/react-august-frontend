@@ -98,7 +98,6 @@ a{
         }
         &:focus{
             border-color: $light-blue;
-            border-radius: 0px;
         }
     }
     input[type="submit"]{
@@ -129,6 +128,7 @@ a{
     margin-right: 20px;
     .text{
         margin-right: 15px;
+        margin-top: 2.5px;
     }
     .edit{
         margin-left: -20px;

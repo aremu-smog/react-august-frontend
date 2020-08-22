@@ -116,7 +116,6 @@ a {
 
 .form-group input:focus {
   border-color: #12B2DD;
-  border-radius: 0px;
 }
 
 .form-group input[type="submit"] {
@@ -153,6 +152,7 @@ a {
 
 .project_list .text {
   margin-right: 15px;
+  margin-top: 2.5px;
 }
 
 .project_list .edit {

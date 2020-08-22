@@ -1,7 +1,9 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
 import NewProject from './project/NewProject'
-import NewResource from './NewResource'
+import NewResource from './resource/NewResource'
+import EditResource from './resource/EditResource'
+
 import Header from './components/Header'
 import Home from './Home'
 import './dashboard.css'
@@ -13,8 +15,9 @@ const Dashboard = () => {
         <div>
             <Header />
             <Route path="/dashboard/new-project"  component={NewProject} />
+            <Route path="/dashboard/edit-project/:id"  component={EditProject} />
             <Route path="/dashboard/new-resource"  component={NewResource} />
-            <Route path="/dashboard/edit-project/:id"  component={EditProject}/>
+            <Route path="/dashboard/edit-resource/:id"  component={EditResource} />
             <Route path="/dashboard" exact component={Home} />
           
             

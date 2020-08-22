@@ -16,7 +16,7 @@ const deleteProject = (project_id) =>{
 
 const ViewProject = ({project_name,project_id}) =>{
     return(
-        <div className="project_list space_between vertical_align">
+        <div className="project_list space_between">
             <div className="text">{project_name}</div> 
             <Link to={`/dashboard/edit-project/${project_id}`}><img src="../../dashboard/edit_icon.svg" className="edit" alt="Edit Icon" /></Link>
             <img onClick={()=> deleteProject(project_id)} src="../../dashboard/delete_icon.svg" className="delete" alt="Delete Icon" />

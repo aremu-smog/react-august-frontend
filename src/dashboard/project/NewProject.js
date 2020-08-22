@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Title from '../components/Title'
 import axios from 'axios'
+import {server} from '../constants'
 
 const NewProject = () => {
     const [loading, setLoading] = useState(false)
@@ -19,12 +20,13 @@ const NewProject = () => {
         data.append("project_name",projectName)
         data.append("project_slug",projectSlug)
         data.append("project_image",projectImage,projectImage.name)
-        const server = "http://react-august-api.herokuapp.com/"
-        // const server = "http://127.0.0.1:8000/"
-        axios.post(server+"api/projects", data)
+        axios.post(`${server}/api/projects`, data)
         .then(res => {
             setLoading(false)
-            setMessage("Data uploaded successfully")
+            setMessage("Project uploaded successfully")
+            setProjectName("")
+            setProjectSlug("")
+            setProjectImage(null)
             // console.log(res.data)
     
         })
@@ -43,17 +45,17 @@ const NewProject = () => {
         <form onSubmit={addProject}>
                 <div className="form-group">
                     <label>Project Name </label>
-                    <input type="text"  required  onChange={(e) => setProjectName(e.target.value)} placeholder="e.g Countdown Timer" />
+                    <input type="text"  required value={projectName}  onChange={(e) => setProjectName(e.target.value)} placeholder="e.g Countdown Timer" />
                 </div>
 
                 <div className="form-group">
                     <label>Project Slug</label>
-                    <input type="text" required  onChange={(e) => setProjectSlug(e.target.value)} placeholder = "e.g countdown-timer" />
+                    <input type="text" required value={projectSlug} onChange={(e) => setProjectSlug(e.target.value)} placeholder = "e.g countdown-timer" />
                 </div>
 
                 <div className="form-group">
                     <label>Project Image</label>
-                    <input type="file"  onChange ={(e) => setProjectImage(e.target.files[0])} />
+                    <input type="file"   onChange ={(e) => setProjectImage(e.target.files[0])} />
                 </div>
 
                 <div className="form-group">
