@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Heading from './components/Heading'
 
 const Journal = () => {
-    const [day, setDay] = useState(1)
+    const [day, setDay] = useState(2)
     const [dayString, setDayString] = useState("01")
     const formatDay =()=>{
         if(day > 9){
