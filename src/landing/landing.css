@@ -67,6 +67,8 @@
 
 .landing .navigation, .landing .container {
   padding-left: 20%;
+  padding-right: 10%;
+  margin-top: 50px;
 }
 
 .landing .navigation .inner, .landing .container .inner {
@@ -100,7 +102,88 @@
 }
 
 .landing .navigation .inner .resource a, .landing .container .inner .resource a {
-  font-size: 1.2em;
+  font-size: 0.75em;
   width: 100%;
+}
+
+.landing .journal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 650px;
+}
+
+.landing .journal .date {
+  margin-right: 2em;
+}
+
+.landing .journal .date .month {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+.landing .journal .date .day {
+  line-height: 0;
+  margin: 70px 0;
+  font-size: 12em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  color: black;
+}
+
+.landing .journal .date .year {
+  line-height: 0;
+}
+
+.landing .journal .date .footer {
+  margin-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.landing .journal .date .footer .year {
+  width: 70px;
+}
+
+.landing .journal .date .footer .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 120px;
+}
+
+.landing .journal .date .footer .nav img {
+  width: 55px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+
+.landing .journal .date .footer .nav .prev:hover {
+  -webkit-transform: translateX(-10PX);
+          transform: translateX(-10PX);
+}
+
+.landing .journal .date .footer .nav .next:hover {
+  -webkit-transform: translateX(10PX);
+          transform: translateX(10PX);
 }
 /*# sourceMappingURL=landing.css.map */
