@@ -12,7 +12,7 @@ const deleteProject = (project_id) =>{
     .catch(error => {
         alert(error.message)
     })
-}
+} 
 
 const ViewProject = ({project_name,project_id}) =>{
     return(

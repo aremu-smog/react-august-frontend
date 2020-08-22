@@ -1,6 +1,7 @@
 $light-blue: #12B2DD;
 
 .landing{
+    color: white;
     background: black;
     min-height: 100vh;
     font: "Red Hat", sans-serif;
@@ -48,6 +49,32 @@ $light-blue: #12B2DD;
         transform: translateX(-100%);
     }
 }
+
+.navigation, .container{
+    padding-left: 20%;
+    .inner{
+        max-width: 700px;
+        p{
+            line-height: 1.5;
+        }
+        .link{
+            display: inline-block;
+            width: 250px;
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            text-decoration: underline;
+            margin-bottom: 10px;
+            &:hover{
+                -webkit-text-stroke-width: 0.5px;
+                -webkit-text-stroke-color: $light-blue;
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
     
 }
 
