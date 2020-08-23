@@ -8,15 +8,15 @@ const Story = () => {
             <div className="container">
                 <div className="inner">
                     <p>
-                    Every single day I wake, the drive is the same: become a world class developer and marry 
-                    the love of my life but how will that happen if I am not working on the kind of projects 
+                    Every single day I wake, the drive is the same: become a world class developer and enjoy life. 
+                    but how do I do that If I am not working on the kind of projects I want
                     that will get me there/earn the kind of money I want. So all these days I thought I knew 
                     React and I thought I could build anything with - I was earnestly waiting for that call - 
-                    it came but I can’t work with the budget. What do I do? Keep waiting? Not SMOG DADDY - 
+                    it came but I couldn’t work with the budget. What do I do? Keep waiting? Not SMOG DADDY - 
                     I decided to build a platform from scratch the way it would be done if I was working a 
                     team of developers: this website in itself is one of them. I must not lie, it wasn’t easy 
-                    because I realized even though I knew React, React didn’t know me that much but now, we 
-                    are getting lovers.<br />With love, Aremu Oluwagbamila(SMOG DADDY)
+                    because I realized even though I knew React, React didn’t know me that much, we 
+                    are however getting to be lovers.<br /><br />With love, <br/>Aremu Oluwagbamila(SMOG DADDY)
                     </p>
                 </div>
             </div>
