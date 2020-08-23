@@ -16,8 +16,8 @@
   color: #12B2DD;
   font-size: 5em;
   display: inline-block;
-  -webkit-transform: translateX(120%);
-          transform: translateX(120%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   min-width: 100%;
   -webkit-animation: gbe_body_e 20s linear forwards infinite;
           animation: gbe_body_e 20s linear forwards infinite;
@@ -185,5 +185,41 @@
 .landing .journal .date .footer .nav .next:hover {
   -webkit-transform: translateX(10PX);
           transform: translateX(10PX);
+}
+
+.landing .message h2 {
+  font-size: 2.5em;
+  -webkit-animation: pana_oju_kan 4s ease-in-out forwards 2s infinite;
+          animation: pana_oju_kan 4s ease-in-out forwards 2s infinite;
+}
+
+.landing .message h2 .outline {
+  -webkit-text-stroke-width: 0.75px;
+  color: black;
+  -webkit-text-stroke-color: white;
+}
+
+@-webkit-keyframes pana_oju_kan {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes pana_oju_kan {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.7;
+  }
 }
 /*# sourceMappingURL=landing.css.map */

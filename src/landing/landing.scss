@@ -16,7 +16,7 @@ $light-blue: #12B2DD;
         color: $light-blue;
         font-size: 5em;
         display: inline-block;
-        transform: translateX(120%);
+        transform: translateX(100%);
         min-width: 100%;
         animation: gbe_body_e 20s linear forwards infinite;
         white-space: nowrap;
@@ -137,6 +137,30 @@ $light-blue: #12B2DD;
         }
        
         }
+    }
+}
+
+.message{
+    h2{
+        font-size: 2.5em;
+        animation: pana_oju_kan 4s ease-in-out forwards 2s infinite;
+        .outline{
+            -webkit-text-stroke-width: 0.75px;
+            color: black;
+            -webkit-text-stroke-color: white;
+        }
+    }
+}
+
+@keyframes pana_oju_kan {
+    0%{
+        opacity: 0.7;
+    }
+    50%{
+        opacity: 0.25;
+    }
+    100%{
+        opacity: 0.7;
     }
 }
     
