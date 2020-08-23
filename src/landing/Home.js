@@ -3,7 +3,7 @@ import Heading from './components/Heading'
 
 const Home = () => {
     return(
-        <div>
+        <div className="intro">
             <Heading solidText="I Knew React but" outlineText=" React didn't know me" />
             <Heading solidText="Everyday in August" outlineText=" 8:00PM - 9:00PM" reverse="reverse" />
             <Heading solidText="React didn't know me but" outlineText=" I knew React" />

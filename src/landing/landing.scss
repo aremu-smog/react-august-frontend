@@ -166,4 +166,36 @@ $light-blue: #12B2DD;
     
 }
 
+@media screen  and (max-width: 468px){
+    .landing{
+        p{
+            font-size: 14px;
+        }
+        .intro{
+            padding: 10vh 0;
+        }
+        .scroll-text{
+            min-height: 60px;
+            h1{
+                font-size: 3em;
+            }
+        }
+        .container, .navigation{
+            padding-left:10%;
+            .inner{
+                .link{
+                    font-size: 1.25em;
+                    width: 50%;
+                }
+            }
+        }
+        .container .inner .link{ width: 100%}
+        .message{h2{
+            font-size: 1.5em;
+            .outline{
+                -webkit-text-stroke-width: 0.3px;
+            }
+        }}
+    }
+}
 

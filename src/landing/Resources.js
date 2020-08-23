@@ -24,7 +24,7 @@ const Resources = () => {
     }, [])
     const allResources = resources.map(resource => <Resource key={resource.id} name={resource.name} url={resource.link}  />)
     return(
-        <div>
+        <div className="intro">
             <Heading solidText="Resources I used for" outlineText="React August" />
             <Heading solidText="List of Solutions  " outlineText="to problems encountered " reverse="reverse"/>
             <div className="container">

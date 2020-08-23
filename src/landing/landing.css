@@ -222,4 +222,35 @@
     opacity: 0.7;
   }
 }
+
+@media screen and (max-width: 468px) {
+  .landing p {
+    font-size: 14px;
+  }
+  .landing .intro {
+    padding: 10vh 0;
+  }
+  .landing .scroll-text {
+    min-height: 60px;
+  }
+  .landing .scroll-text h1 {
+    font-size: 3em;
+  }
+  .landing .container, .landing .navigation {
+    padding-left: 10%;
+  }
+  .landing .container .inner .link, .landing .navigation .inner .link {
+    font-size: 1.25em;
+    width: 50%;
+  }
+  .landing .container .inner .link {
+    width: 100%;
+  }
+  .landing .message h2 {
+    font-size: 1.5em;
+  }
+  .landing .message h2 .outline {
+    -webkit-text-stroke-width: 0.3px;
+  }
+}
 /*# sourceMappingURL=landing.css.map */

@@ -56,7 +56,7 @@ const Journal = () => {
 
 
     return(
-        <div>
+        <div className="intro">
             <Heading solidText="The Daily Gbas Gbos " outlineText="of React August" />
             <Heading solidText="The Winnings are not " outlineText="also left out" reverse="reverse" /> 
             <div className="container">
