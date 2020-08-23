@@ -8,7 +8,7 @@ const Story = () => {
             <div className="container">
                 <div className="inner">
                     <p>
-                    Every single day I wake, the drive is the same: become a world class developer and enjoy life. 
+                    Every single day I wake up, the drive is the same: become a world class developer and enjoy life. 
                     but how do I do that If I am not working on the kind of projects I want
                     that will get me there/earn the kind of money I want. So all these days I thought I knew 
                     React and I thought I could build anything with - I was earnestly waiting for that call - 
