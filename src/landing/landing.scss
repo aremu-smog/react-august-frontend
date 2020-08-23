@@ -1,10 +1,12 @@
 $light-blue: #12B2DD;
 
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+
 .landing{
     color: white;
     background: black;
     min-height: 100vh;
-    font: "Red Hat", sans-serif;
+    font-family: 'Red Hat Text', sans-serif;
 
 
 .scroll-text{
