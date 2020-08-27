@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-          <Landing />
+          <Route path="/" component={Landing} />
           <Route path="/dashboard" component={Dashboard} />
       </Router>
     </div>
