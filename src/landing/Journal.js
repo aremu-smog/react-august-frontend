@@ -7,40 +7,45 @@ import Layout from './components/Layout'
 import {server} from '../dashboard/constants'
 
 const Journal = () => {
+    const [notes, setNotes] = useState([])
     const [day, setDay] = useState(2)
+    const [noOfDays, setNoOfDays] = useState(1)
     const [dayString, setDayString] = useState("01")
     const [content,setContent] = useState("")
     const [isLoading, setIsLoading] = useState(false)
     const [error,setError] = useState(false)
     const [errorMessage,setErrorMessage] = useState("")
-    const [contents, setContents] = useState([])
 
     useEffect(()=> {
         setIsLoading(true)
         axios.get(`${server}/api/notes`)
         .then(res => {
-            setContents(res.data)
-            console.log(res.data)
-            setContent(contents[0].content)
+            setNotes(res.data)
+            setContent(res.data[0].content)
+            setNoOfDays(res.data.length);
+            setIsLoading(false)
+            setError(false)
         })
         .catch(error => {
             setErrorMessage(error.message)
             setIsLoading(false)
             setError(true)
         })
-    },[contents])
+    },[])
+
+
     const formatDay =()=>{
         if(day > 9){
             setDayString(day)
         }else{
             setDayString(`0${day}`)
         }
-        setContent( contents[day-1].content)
+        setContent( notes[day-1].content)
     }
    
     const prev = () => {
         if(day === 1){
-            setDay(31)
+            setDay(noOfDays)
         }else{
             setDay(day - 1)
         }
@@ -48,7 +53,7 @@ const Journal = () => {
     }
 
     const next = () => {
-        if(day === 31){
+        if(day === noOfDays){
             setDay(1)
         }else{
             setDay(day + 1)
