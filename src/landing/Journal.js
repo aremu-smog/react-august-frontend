@@ -3,6 +3,7 @@ import Heading from './components/Heading'
 import Message from './components/Message'
 import Note from './components/Note'
 import axios from 'axios'
+import Layout from './components/Layout'
 import {server} from '../dashboard/constants'
 
 const Journal = () => {
@@ -19,6 +20,7 @@ const Journal = () => {
         axios.get(`${server}/api/notes`)
         .then(res => {
             setContents(res.data)
+            console.log(res.data)
             setContent(contents[0].content)
         })
         .catch(error => {
@@ -57,6 +59,7 @@ const Journal = () => {
 
     return(
         <div className="intro">
+            <Layout>
             <Heading solidText="The Daily Gbas Gbos " outlineText="of React August" />
             <Heading solidText="The Winnings are not " outlineText="also left out" reverse="reverse" /> 
             <div className="container">
@@ -64,6 +67,7 @@ const Journal = () => {
             {(error === false && isLoading === false) ? <Note day={dayString} next={next} prev={prev} content={content}/>: <Message solidText="Error wa o!" outlineText={errorMessage} />}
                 
             </div>
+            </Layout>
         </div>
     )
 }

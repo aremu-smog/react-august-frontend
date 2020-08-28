@@ -3,6 +3,7 @@ import Heading from './components/Heading'
 import Message from './components/Message'
 import Resource from './components/Resource'
 import axios from 'axios'
+import Layout from './components/Layout'
 const Resources = () => {
     const [resources, setResources] = useState([])
     const [isLoading, setIsLoading] = useState(false)
@@ -25,6 +26,7 @@ const Resources = () => {
     const allResources = resources.map(resource => <Resource key={resource.id} name={resource.name} url={resource.link}  />)
     return(
         <div className="intro">
+        <Layout>
             <Heading solidText="Resources I used for" outlineText="React August" />
             <Heading solidText="List of Solutions  " outlineText="to problems encountered " reverse="reverse"/>
             <div className="container">
@@ -34,6 +36,7 @@ const Resources = () => {
                     
                 </div>
             </div>
+        </Layout>
         </div>
     )
 }

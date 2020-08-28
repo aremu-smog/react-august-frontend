@@ -1,8 +1,11 @@
 import React from 'react'
 import Heading from './components/Heading'
+import Layout from './components/Layout'
+
 const Story = () => {
     return(
         <div className="intro">
+            <Layout>
             <Heading solidText="This is the Story of" outlineText="React August" />
             <Heading solidText="Write ReactJS " outlineText="Every Single day " reverse="reverse"/>
             <div className="container">
@@ -20,6 +23,7 @@ const Story = () => {
                     </p>
                 </div>
             </div>
+            </Layout>
         </div>
     )
 }

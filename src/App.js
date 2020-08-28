@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-          <Route path="/" component={Landing} />
           <Route path="/dashboard" component={Dashboard} />
+          <Landing />
       </Router>
     </div>
   );
