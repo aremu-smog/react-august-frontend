@@ -63,6 +63,7 @@ $light-blue: #12B2DD;
         background: $light-blue;
         position: fixed;
         bottom: 20px;
+        transform: scale(0);
         left: 40%;
     }
     .inner{
@@ -215,6 +216,7 @@ $light-blue: #12B2DD;
         }
         .menu-icon{
             mix-blend-mode:difference;
+            transform: scale(1);
 
         }
         }
