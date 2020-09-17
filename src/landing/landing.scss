@@ -57,6 +57,14 @@ $light-blue: #12B2DD;
     padding-left: 20%;
     padding-right: 10%;
     margin-top: 50px;
+    .menu-icon{
+        padding: 30px 20.36px;
+        border-radius: 50%;
+        background: $light-blue;
+        position: fixed;
+        bottom: 20px;
+        left: 40%;
+    }
     .inner{
         max-width: 700px;
         p{
@@ -186,12 +194,48 @@ $light-blue: #12B2DD;
             padding-left:10%;
             .inner{
                 .link{
-                    font-size: 1.25em;
-                    width: 50%;
+                    width: 100%;
+                    font-size: 1.45em;
                 }
             }
         }
-        .container .inner .link{ width: 100%}
+        .navigation{
+        right: 0;
+        bottom: 0;
+        height: 0;
+        margin-top: 0;
+        position: absolute;
+        border-radius: 100% 100% 0 0;
+        width: 80%;
+        transition: all 0.5s ease-in-out;
+        .inner .link{
+            text-align: center;
+            font-size: 0;
+            transform: translateY(50px);
+        }
+        .menu-icon{
+            mix-blend-mode:difference;
+
+        }
+        }
+        .mobile-nav-open{
+        height: 100vh;
+        background: $light-blue;
+        border-radius: 0;
+        transition: all 0.5s ease-in-out;
+        .inner{
+            position: absolute;
+            bottom: 150px;
+            margin: auto;
+            left: 0;
+            .link{
+                font-size: 2em;
+                transform: translateY(0px);
+            }
+        }
+        }
+        
+        }
         .message{h2{
             font-size: 1.5em;
             .outline{
@@ -199,5 +243,5 @@ $light-blue: #12B2DD;
             }
         }}
     }
-}
+
 
