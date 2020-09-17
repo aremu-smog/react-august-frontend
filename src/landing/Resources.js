@@ -31,8 +31,10 @@ const Resources = () => {
             <Heading solidText="List of Solutions  " outlineText="to problems encountered " reverse="reverse"/>
             <div className="container">
                 <div className="inner">
-                {isLoading === true ?<Message solidText="Duro Chere" outlineText="Wait Jira " />:""}
-            {(error === false && isLoading === false) ? allResources: <Message solidText="Error wa o!" outlineText={errorMessage} />}
+                {isLoading === true ?
+                <Message solidText="Duro Chere" outlineText="Wait Jira " />: 
+                (error === false && isLoading === false) ? allResources: <Message solidText="Error wa o!" outlineText={errorMessage} />}
+           
                     
                 </div>
             </div>

@@ -68,9 +68,10 @@ const Journal = () => {
             <Heading solidText="The Daily Gbas Gbos " outlineText="of React August" />
             <Heading solidText="The Winnings are not " outlineText="also left out" reverse="reverse" /> 
             <div className="container">
-            {isLoading === true ?<Message solidText="Duro Chere" outlineText="Wait Jira " />:""}
-            {(error === false && isLoading === false) ? <Note day={dayString} next={next} prev={prev} content={content}/>: <Message solidText="Error wa o!" outlineText={errorMessage} />}
-                
+            {isLoading === true ?
+            <Message solidText="Duro Chere" outlineText="Wait Jira " />:
+            (error === false && isLoading === false) ? 
+            <Note day={dayString} next={next} prev={prev} content={content}/>: <Message solidText="Error wa o!" outlineText={errorMessage} />}   
             </div>
             </Layout>
         </div>
