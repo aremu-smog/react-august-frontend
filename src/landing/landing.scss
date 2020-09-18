@@ -209,10 +209,13 @@ $light-blue: #12B2DD;
         border-radius: 100% 100% 0 0;
         width: 80%;
         transition: all 0.5s ease-in-out;
-        .inner .link{
+        .inner {
+            transform: translateY(150px);
+            opacity: 0;
+        .link{
             text-align: center;
             font-size: 0;
-            transform: translateY(50px);
+        } 
         }
         .menu-icon{
             mix-blend-mode:difference;
@@ -230,9 +233,23 @@ $light-blue: #12B2DD;
             bottom: 150px;
             margin: auto;
             left: 0;
+            opacity: 0;
+            animation: enter_body 0.5s ease-out 0.5s forwards;
+            @keyframes enter_body{
+                0%{
+                    opacity: 0;
+                    transform: translateY(80px);
+                }
+                70%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
             .link{
                 font-size: 2em;
-                transform: translateY(0px);
             }
         }
         }

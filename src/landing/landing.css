@@ -266,11 +266,14 @@
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
+  .landing .navigation .inner {
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+    opacity: 0;
+  }
   .landing .navigation .inner .link {
     text-align: center;
     font-size: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
   }
   .landing .navigation .menu-icon {
     mix-blend-mode: difference;
@@ -289,11 +292,42 @@
     bottom: 150px;
     margin: auto;
     left: 0;
+    opacity: 0;
+    -webkit-animation: enter_body 0.5s ease-out 0.5s forwards;
+            animation: enter_body 0.5s ease-out 0.5s forwards;
+  }
+  @-webkit-keyframes enter_body {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(80px);
+              transform: translateY(80px);
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+  }
+  @keyframes enter_body {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(80px);
+              transform: translateY(80px);
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
   }
   .landing .mobile-nav-open .inner .link {
     font-size: 2em;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
   }
   .message h2 {
     font-size: 1.5em;
