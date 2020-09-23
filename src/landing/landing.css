@@ -189,16 +189,6 @@
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
-.landing .journal .date .footer .nav .prev:hover {
-  -webkit-transform: translateX(-10PX);
-          transform: translateX(-10PX);
-}
-
-.landing .journal .date .footer .nav .next:hover {
-  -webkit-transform: translateX(10PX);
-          transform: translateX(10PX);
-}
-
 .landing .message h2 {
   font-size: 2.5em;
   -webkit-animation: pana_oju_kan 4s ease-in-out forwards 2s infinite;
@@ -236,6 +226,9 @@
 }
 
 @media screen and (max-width: 468px) {
+  .landing {
+    padding-bottom: 4em;
+  }
   .landing p {
     font-size: 14px;
   }
@@ -330,10 +323,31 @@
     font-size: 2em;
   }
   .message h2 {
-    font-size: 1.5em;
+    font-size: 3em !important;
   }
   .message h2 .outline {
     -webkit-text-stroke-width: 0.3px;
+  }
+  .journal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .journal .date {
+    margin: 2em auto;
+  }
+  .journal .date .day {
+    font-size: 10em !important;
+  }
+  .journal .date .month {
+    text-align: center;
+  }
+  .journal .date .footer {
+    margin-top: 50px !important;
+  }
+  .journal .content {
+    margin-bottom: 4em;
   }
 }
 /*# sourceMappingURL=landing.css.map */

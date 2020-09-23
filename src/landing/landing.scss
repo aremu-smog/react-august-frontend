@@ -135,16 +135,16 @@ $light-blue: #12B2DD;
                     cursor: pointer;
                     transition: transform 0.25s ease-in-out;
                 }
-                .prev{
-                    &:hover{
-                        transform: translateX(-10PX);
-                    }
-                }
-                .next{
-                    &:hover{
-                        transform: translateX(10PX);
-                    }
-                }
+                // .prev{
+                //     &:hover{
+                //         transform: translateX(-10PX);
+                //     }
+                // }
+                // .next{
+                //     &:hover{
+                //         transform: translateX(10PX);
+                //     }
+                // }
         }
        
         }
@@ -179,6 +179,7 @@ $light-blue: #12B2DD;
 
 @media screen  and (max-width: 468px){
     .landing{
+        padding-bottom: 4em;
         p{
             font-size: 14px;
         }
@@ -255,12 +256,27 @@ $light-blue: #12B2DD;
         }
         
         }
-        .message{h2{
-            font-size: 1.5em;
+        .message{
+            h2{
+            font-size: 3em !important;
             .outline{
                 -webkit-text-stroke-width: 0.3px;
             }
         }}
+
+        .journal{
+            flex-direction: column;
+            .date{
+
+                margin: 2em auto;
+                .day{font-size: 10em !important;}
+                .month{text-align: center}
+                .footer{margin-top: 50px !important;}
+            }
+            .content{
+                margin-bottom: 4em;
+            }
+        }
     }
 
 
