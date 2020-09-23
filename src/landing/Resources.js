@@ -32,7 +32,7 @@ const Resources = () => {
             <div className="container">
                 <div className="inner">
                 {isLoading === true ?
-                <Message solidText="Duro Chere" outlineText="Wait Jira " />: 
+                <Message solidText="Duro, Chere," outlineText="Wait, Jira " />: 
                 (error === false && isLoading === false) ? allResources: <Message solidText="Error wa o!" outlineText={errorMessage} />}
            
                     
