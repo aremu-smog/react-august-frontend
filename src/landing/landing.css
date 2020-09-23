@@ -118,6 +118,17 @@
   width: 100%;
 }
 
+.landing .navigation .inner .resource a:hover img, .landing .container .inner .resource a:hover img {
+  margin-left: 10px;
+}
+
+.landing .navigation .inner .resource img, .landing .container .inner .resource img {
+  width: 15px;
+  margin-left: 5px;
+  -webkit-transition: margin-left 0.25s ease-in-out;
+  transition: margin-left 0.25s ease-in-out;
+}
+
 .landing .journal {
   display: -webkit-box;
   display: -ms-flexbox;

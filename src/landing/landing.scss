@@ -92,6 +92,13 @@ $light-blue: #12B2DD;
             a{
                 font-size: 0.75em;
                 width: 100%;
+                &:hover{
+                img{margin-left: 10px;}
+            }
+            }
+
+            img{width: 15px; margin-left: 5px; 
+            transition: margin-left 0.25s ease-in-out;
             }
         }
     }
