@@ -360,5 +360,83 @@
   .journal .content {
     margin-bottom: 4em;
   }
+  .journal .mobile-nav {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    bottom: 35px;
+  }
+  .journal .mobile-nav span {
+    display: inline-block;
+    width: 60px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #12B2DD;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    mix-blend-mode: difference;
+  }
+  .journal .mobile-nav span:first-child {
+    -webkit-animation: first-child 0.7s ease-in-out;
+            animation: first-child 0.7s ease-in-out;
+  }
+  .journal .mobile-nav span:last-child {
+    -webkit-animation: last-child 0.7s ease-in-out;
+            animation: last-child 0.7s ease-in-out;
+  }
+  @-webkit-keyframes first-child {
+    from {
+      -webkit-transform: translateX(150%);
+              transform: translateX(150%);
+    }
+    to {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+    }
+  }
+  @keyframes first-child {
+    from {
+      -webkit-transform: translateX(150%);
+              transform: translateX(150%);
+    }
+    to {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+    }
+  }
+  @-webkit-keyframes last-child {
+    from {
+      -webkit-transform: translateX(-150%);
+              transform: translateX(-150%);
+    }
+    to {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+    }
+  }
+  @keyframes last-child {
+    from {
+      -webkit-transform: translateX(-150%);
+              transform: translateX(-150%);
+    }
+    to {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+    }
+  }
 }
 /*# sourceMappingURL=landing.css.map */

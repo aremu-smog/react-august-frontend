@@ -17,7 +17,12 @@ const Note = ({day, next, prev, content}) => {
                         
                     </div>
                     <div className="content">{content}</div>
-                </div>
+                    <nav className="mobile-nav">
+                        <span onClick={prev}>Prev</span>
+                        <span onClick={next}>Next</span>
+
+                    </nav>
+        </div>
     )
 }
 
